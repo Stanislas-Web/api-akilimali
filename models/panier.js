@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     models.panier.belongsTo(models.user, { foreignKey: 'userId' });
     models.panier.belongsTo(models.ligneDeCommande, { foreignKey: 'ligneDeCommandeId' });
-
   };
   return panier;
 };
