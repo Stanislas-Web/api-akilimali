@@ -9,10 +9,5 @@
     {
       "src": "/(.*)"
     }
-  ],
-  "package.json": {
-    "engines": {
-      "node": "14.x"
-    }
-  }
+  ]
 }
