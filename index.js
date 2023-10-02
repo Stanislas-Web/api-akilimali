@@ -32,9 +32,9 @@ const port = process.env.PORT || 8000;
 // });
   
 
-db.sequelize.sync().then(() => {
+// db.sequelize.sync().then(() => {
   app.listen(port, () => {
     let host = `http://localhost:${port}`;
     console.log(chalk.yellow(host));
   });
-});
+// });
