@@ -20,20 +20,20 @@
 
 require('dotenv/config')
 const app = require('./app');
-const chalk = require("chalk");
-const db = require("./models");
+// const chalk = require("chalk");
+// const db = require("./models");
 
 
 const port = process.env.PORT || 8000;
 
-// app.listen(port, () => {
-//   let host = `http://localhost:${port}`;
-//   console.log('Express server démarré sur le port ' + port + chalk.yellow(host));
-// });
+app.listen(port, () => {
+  let host = `http://localhost:${port}`;
+  console.log('Express server démarré sur le port ' + port);
+});
 
 // db.sequelize.sync().then(() => {
-  app.listen(port, () => {
-    let host = `http://localhost:${port}`;
-    console.log(chalk.yellow(host));
-  });
+  // app.listen(port, () => {
+  //   let host = `http://localhost:${port}`;
+  //   // console.log(chalk.yellow(host));
+  // });
 // });
