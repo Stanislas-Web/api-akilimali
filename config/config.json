@@ -1,29 +1,29 @@
 {
   "development": {
-    "username": "akilimali",
+    "username": "stynos",
     "password": "0826016607Makengo?",
     "database": "akilimali",
-    "host": "db4free.net",
+    "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "port":3306
 
   },
   "test": {
-    "username": "akilimali",
+    "username": "stynos",
     "password": "0826016607Makengo?",
     "database": "akilimali",
-    "host": "db4free.net",
+    "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "port":3306
 
   },
   "production": {
-    "username": "akilimali",
+    "username": "stynos",
     "password": "0826016607Makengo?",
     "database": "akilimali",
-    "host": "db4free.net",
+    "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "port":3306
