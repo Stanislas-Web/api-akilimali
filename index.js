@@ -30,7 +30,6 @@ const port = process.env.PORT || 8000;
 //   let host = `http://localhost:${port}`;
 //   console.log('Express server démarré sur le port ' + port + chalk.yellow(host));
 // });
-  
 
 // db.sequelize.sync().then(() => {
   app.listen(port, () => {
