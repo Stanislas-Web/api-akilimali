@@ -5,8 +5,7 @@
     "database": "akilimali",
     "host": "localhost",
     "dialect": "mysql",
-    "operatorsAliases": 0,
-    "port":3306
+    "operatorsAliases": 0
 
   },
   "test": {
@@ -15,8 +14,7 @@
     "database": "akilimali",
     "host": "localhost",
     "dialect": "mysql",
-    "operatorsAliases": 0,
-    "port":3306
+    "operatorsAliases": 0
 
   },
   "production": {
@@ -25,7 +23,6 @@
     "database": "akilimali",
     "host": "localhost",
     "dialect": "mysql",
-    "operatorsAliases": 0,
-    "port":3306
+    "operatorsAliases": 0
   }
 }
