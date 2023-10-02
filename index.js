@@ -9,9 +9,8 @@ const server = http.createServer(app);
 const db = require("./models");
 
 db.sequelize.sync().then(() => {
-  app.listen(port, () => {
+  server.listen(port, () => {
     let host = `http://localhost:${port}`;
     console.log(chalk.yellow(host));
   });
 });
-
