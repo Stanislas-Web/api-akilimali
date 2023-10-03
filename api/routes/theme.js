@@ -76,9 +76,20 @@ const ouvrage = await db.ouvrage.findOne({where:{titre_ouvrage:titre_ouvrage}}).
 await db.theme.findOne({where:{id:Number(req.params.themeId)}}).then(theme=>{
   theme.addOuvrage(ouvrage,{ through: { selfGranted: false } });
 })
+
+const auteur1 = await db.auteur.findOne({ where: { nom_auteur: nom_auteur } }) // Ajouter await ici
 await auteur.addOuvrage(ouvrage, { through: { selfGranted: false } }).then(data=>{
   return res.send(data);
 }).catch(err=>res.status(404).json(err));
+
+
+
+// await auteur.addOuvrage(ouvrage, { through: { selfGranted: false } }).then(data=>{
+//   return res.send(data);
+   
+// }).catch(err=>res.status(404).json(err));
+
+
 
 
 

@@ -67,7 +67,6 @@ router.post("/ouvrages",cors(), async (req, res) => {
     const { titre_ouvrage, description_ouvrage, image_ouvrage, pays_ouvrage, prix_ouvrage, genre_ouvrage, lien_ouvrage, nom_auteur, prenom_auteur, pays_auteur, image_auteur, categorie_ouvrage } = req.body;
 
 
-
 const auteur= await   db.auteur.findOne({ where: { nom_auteur: nom_auteur } })
             .then(data => {
                 if (data) {
@@ -80,7 +79,8 @@ const ouvrage = await db.ouvrage.findOne({where:{titre_ouvrage:titre_ouvrage}}).
     if (data) {
         return db.ouvrage.update({ titre_ouvrage: titre_ouvrage,description_ouvrage:description_ouvrage, image_ouvrage:image_ouvrage, }, { where: { id:Number(data.id)  } })
     }
-    return db.ouvrage.create({ titre_ouvrage: titre_ouvrage,
+    return db.ouvrage.create({ 
+        titre_ouvrage: titre_ouvrage,
         description_ouvrage: description_ouvrage,
         image_ouvrage: image_ouvrage,
         lien_ouvrage: lien_ouvrage,
@@ -88,6 +88,8 @@ const ouvrage = await db.ouvrage.findOne({where:{titre_ouvrage:titre_ouvrage}}).
         prix_ouvrage: prix_ouvrage,
         genre_ouvrage: genre_ouvrage });
 });
+
+
 await auteur.addOuvrage(ouvrage, { through: { selfGranted: false } }).then(data=>{
     return res.send(data);
 }).catch(err=>res.status(404).json(err));
